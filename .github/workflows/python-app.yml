@@ -34,3 +34,7 @@ jobs:
     - name: Streamlit dry-run
       run: |
         streamlit run app.py --server.headless true --runner.magic-traceback false --max-run-time 1
+
+    - name: Lint code with flake8
+      run: flake8 . --exclude env,__pycache__,.venv
+    
